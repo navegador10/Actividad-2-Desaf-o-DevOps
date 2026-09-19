@@ -221,6 +221,9 @@ docker ps
 View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/xo40hvfsg1au48hnnwpdvl9cx
 ```
 
+![git clone y docker build completado](docs/evidencias/01-git-clone-docker-build.png)
+*Captura real de terminal: clonado del repo y construcción de la imagen (15/15 pasos, éxito).*
+
 **Evidencia de la imagen creada (`docker images`):**
 
 ```
@@ -239,9 +242,15 @@ CONTAINER ID   IMAGE               COMMAND                  CREATED          STA
 2a4300e98cc3   programacionv-api   "dotnet Programacion…"   11 seconds ago   Up 10 seconds   0.0.0.0:8080->8080/tcp   programacionv-api-container
 ```
 
+![docker images, run, ps, stop y start](docs/evidencias/02-docker-images-ps-stop-start.png)
+*Captura real de terminal: imagen creada, contenedor corriendo, y el ciclo completo stop/start del Desafío 2.*
+
 **Puerto utilizado:** `8080` (mapeado `0.0.0.0:8080 -> 8080/tcp` del contenedor).
 
 **Evidencia de la API funcionando desde el contenedor:** accediendo a `http://localhost:8080` desde el navegador, la aplicación redirige automáticamente a `http://localhost:8080/scalar/v1`, donde se visualiza correctamente la documentación interactiva (Scalar) de `ProgramacionV.Api`, listando los endpoints de `Estudiantes` y `Programas` (GET, POST, PUT, DELETE) y los modelos `Estudiante` y `ProgramaAcademico`, con sus respectivos ejemplos de petición/respuesta probados en vivo (200 OK).
+
+![API funcionando desde el contenedor, documentación Scalar](docs/evidencias/03-api-scalar-funcionando.png)
+*Captura real del navegador: localhost:8080 sirviendo la API desde el contenedor Docker.*
 
 ### Preguntas
 
