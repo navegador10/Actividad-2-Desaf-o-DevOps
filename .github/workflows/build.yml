@@ -24,3 +24,6 @@ jobs:
 
       - name: Compilar
         run: dotnet build --no-restore --configuration Release
+
+      - name: Verificar resultado
+        run: echo "Build completado correctamente"
